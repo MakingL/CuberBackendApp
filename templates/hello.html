@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuber Hello</title>
+
+    <style>
+        div.container {
+            margin-top: 100px;
+        }
+
+        h1.header {
+            color: #0099E5;
+        }
+    </style>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container center-block">
+    <h1 class="header text-center">Cuber Upstream Backend</h1>
+</div>
+
+<div class="container center-block">
+    <h3 class="text-center">Hello world! This is Cuber Upstream Backend Response!</h3>
+</div>
+
+{% if peer_ip %}
+    <div class="container center-block">
+        <h4 class="text-center">Your ip: {{ peer_ip }} </h4>
+    </div>
+{% endif %}
+
+</body>
+</html>

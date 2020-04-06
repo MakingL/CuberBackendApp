@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuber Counter</title>
+
+    <style>
+        div.container {
+            margin-top: 100px;
+        }
+        h1.header {
+            color: #0099E5;
+        }
+    </style>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container center-block">
+    <h1 class="header text-center">Cuber Counter</h1>
+</div>
+
+<div class="container center-block">
+    <div class="text-center">
+        <h4>Counter is: {{ count_num }}</h4>
+    </div>
+</div>
+
+<div class="container center-block text-center" >
+    <form action="/counter/" method="POST">
+        {% csrf_token %}
+        <button class="btn-primary" name="key" value="counter">Increase</button>
+    </form>
+</div>
+
+</body>
+</html>
